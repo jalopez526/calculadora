@@ -41,23 +41,21 @@ Debe usar el formato <numero1> <operacion> <numero2>
 
 ## El asterisco `*` en la terminal
 
-No ejecutes esto:
+Si intenta multiplicar con el * directamente, no funcionará:
 
 ```bash
 ./main 5 * 5
 ```
 
-En bash, `*` es un comodín (glob). La terminal lo reemplaza por **todos los archivos del directorio** antes de lanzar el programa. `main` recibe muchos argumentos en vez de tres y falla el formato.
+En bash, `*` es un comodín. La terminal lo reemplaza por **todos los archivos del directorio** antes de lanzar el programa. `main` recibe muchos argumentos en vez de tres y falla el formato.
 
-Para multiplicar, cita o escapa el operador:
+Para multiplicar, utilizar uno de los siguientes:
 
 ```bash
 ./main 5 '*' 5
 ./main 5 "*" 5
 ./main 5 \* 5
 ```
-
-`+`, `-` y `/` no son globs, así que normalmente se pueden pasar sin comillas.
 
 ## Probar
 
